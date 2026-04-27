@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "skills": "Expertise",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis BOUCHELAGHEM Mohammed",
+    "role": "Développeur logiciel Full Stack",
+    "description": "Je conçois et développe des architectures web scalables, sécurisées et performantes. Transformons des exigences complexes en solutions élégantes.",
+    "cta": "Voir Mon Travail"
+  },
+  "services": {
+    "title": "Mes Services",
+    "s1Title": "Applications Web Sur Mesure",
+    "s1Desc": "Création d'applications web complètes de bout en bout avec des architectures modernes adaptées à vos besoins.",
+    "s2Title": "Développement API & Backend",
+    "s2Desc": "Conception d'APIs RESTful et de microservices sécurisés et performants gérant une logique métier complexe.",
+    "s3Title": "Architecture de Base de Données",
+    "s3Desc": "Optimisation de bases de données relationnelles et NoSQL pour la scalabilité, la performance et l'intégrité des données."
+  },
+  "widgets": {
+    "title": "Expertise Technique",
+    "liveStatus": "État de l'Infrastructure",
+    "statusOnline": "Tous les environnements sont stables",
+    "frontend": "Architecture Frontend",
+    "backend": "Backend & APIs",
+    "database": "Cloud & Bases de Données",
+    "tools": "CI/CD & DevOps"
+  },
+  "projects": {
+    "title": "Projets Phares",
+    "viewCode": "Code Source",
+    "liveDemo": "Démo",
+    "project1": {
+      "title": "Plateforme E-Commerce",
+      "desc": "Une plateforme e-commerce moderne et fonctionnelle avec inventaire en temps réel et paiement intégré."
+    },
+    "project2": {
+      "title": "Système de Gestion Scolaire",
+      "desc": "Un tableau de bord complet pour la gestion des notes, des présences et des tâches administratives."
+    },
+    "project3": {
+      "title": "Générateur de Contenu IA",
+      "desc": "Une application SaaS avancée utilisant React et les APIs OpenAI pour la génération automatisée de contenu."
+    },
+    "project4": {
+      "title": "Tableau de bord CRM (Laravel)",
+      "desc": "Un système robuste de gestion de la relation client conçu avec PHP Laravel et MySQL."
+    },
+    "project5": {
+      "title": "API Financière (Spring Boot)",
+      "desc": "Un microservice API financier sécurisé et performant utilisant Java Spring Boot et PostgreSQL."
+    },
+    "project6": {
+      "title": "Task Collab (Angular & Node)",
+      "desc": "Un outil de gestion de projet en temps réel utilisant Angular, Node.js, Express et MongoDB."
+    }
+  },
+  "footer": {
+    "text": "© 2026 Mohammed Bouchelaghem. Réalisé avec React & Vite."
+  }
+}

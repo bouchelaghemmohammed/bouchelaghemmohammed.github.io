@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "skills": "Expertise",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm BOUCHELAGHEM Mohammed",
+    "role": "Full Stack Software Developer",
+    "description": "I architect and build scalable, secure, and exceptional digital experiences. Let's turn complex requirements into elegant solutions.",
+    "cta": "View My Work"
+  },
+  "services": {
+    "title": "What I Do",
+    "s1Title": "Custom Web Applications",
+    "s1Desc": "Building complete, end-to-end web applications with modern architectures tailored to your business needs.",
+    "s2Title": "API & Backend Development",
+    "s2Desc": "Designing secure, high-performance RESTful APIs and microservices handling complex business logic.",
+    "s3Title": "Database Architecture",
+    "s3Desc": "Optimizing relational and NoSQL databases for scalability, performance, and data integrity."
+  },
+  "widgets": {
+    "title": "Technical Expertise",
+    "liveStatus": "Infrastructure Status",
+    "statusOnline": "All Environments Stable",
+    "frontend": "Frontend Architecture",
+    "backend": "Backend & APIs",
+    "database": "Cloud & Databases",
+    "tools": "CI/CD & DevOps"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "project1": {
+      "title": "E-Commerce Platform",
+      "desc": "A fully functional modern e-commerce platform with real-time inventory and seamless checkout."
+    },
+    "project2": {
+      "title": "School Management System",
+      "desc": "A comprehensive dashboard for managing student grades, attendance, and administrative tasks."
+    },
+    "project3": {
+      "title": "AI Content Generator App",
+      "desc": "An advanced SaaS application utilizing React and OpenAI APIs for automated content generation."
+    },
+    "project4": {
+      "title": "CRM Dashboard (Laravel)",
+      "desc": "A robust customer relationship management system built with PHP Laravel and MySQL."
+    },
+    "project5": {
+      "title": "Finance API (Spring Boot)",
+      "desc": "A secure, high-performance financial API microservice utilizing Java Spring Boot and PostgreSQL."
+    },
+    "project6": {
+      "title": "Task Collab (Angular & Node)",
+      "desc": "A real-time project management tool using Angular, Node.js, Express, and MongoDB."
+    }
+  },
+  "footer": {
+    "text": "© 2026 Mohammed Bouchelaghem. Built with React & Vite."
+  }
+}
