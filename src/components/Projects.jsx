@@ -7,16 +7,16 @@ const Projects = ({ t }) => {
   const projects = [
     {
       id: 'project1',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com/bouchelaghemmohammed/ecommerce',
-      demo: 'https://ecommerce-demo.vercel.app',
+      tech: ['Angular', 'Node.js', 'MongoDB', 'Stripe'],
+      github: 'https://github.com/bouchelaghemmohammed/MBMarketDocker.git',
+      demo: 'https://mbmarket.onrender.com',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80'
     },
     {
       id: 'project2',
       tech: ['C#', '.NET', 'Blazor', 'SQL Server'],
-      github: 'https://github.com/bouchelaghemmohammed/GestionScolaire',
-      demo: 'https://gestion-scolaire-demo.vercel.app',
+      github: 'https://github.com/bouchelaghemmohammed/skolarisfront.git',
+      demo: '#',
       image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80'
     },
     {
