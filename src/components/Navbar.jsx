@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Globe } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Globe, Sun, Moon } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import './Navbar.css';
 
-const Navbar = ({ lang, setLang, t }) => {
+const Navbar = ({ lang, setLang, t, theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Navbar = ({ lang, setLang, t }) => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled glass' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled glass' : ''}`} style={{ position: 'relative', zIndex: 1000 }}>
       <div className="container nav-content">
         <a href="#" className="logo">
           BOUCHELAGHEM  MOHAMMED<span className="dot">.</span>
@@ -31,6 +31,9 @@ const Navbar = ({ lang, setLang, t }) => {
           <a href="https://www.linkedin.com/in/bouchelaghemmoh" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="LinkedIn">
             <FaLinkedin size={22} />
           </a>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+          </button>
           <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle Language">
             <Globe size={20} />
             <span>{lang.toUpperCase()}</span>

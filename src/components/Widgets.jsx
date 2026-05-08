@@ -1,50 +1,72 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Server, Database, Code, Terminal, Layers } from 'lucide-react';
+import { Activity, Terminal, Code2, Server, Database, Cpu } from 'lucide-react';
 import './Widgets.css';
+
+const techStack = [
+  {
+    category: 'frontend',
+    icon: <Code2 size={20} />,
+    items: ['React', 'Next.js', 'TypeScript', 'Angular', 'Tailwind CSS', 'HTML / CSS'],
+  },
+  {
+    category: 'backend',
+    icon: <Server size={20} />,
+    items: ['Node.js / Express', 'PHP / Laravel', 'Java / Spring Boot', 'C# / .NET', 'REST APIs', 'GraphQL'],
+  },
+  {
+    category: 'database',
+    icon: <Database size={20} />,
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'SQL Server', 'Prisma ORM'],
+  },
+  {
+    category: 'devops',
+    icon: <Cpu size={20} />,
+    items: ['Docker', 'Kubernetes', 'Jenkins', 'GitHub Actions', 'Linux / Bash', 'AWS / Azure'],
+  },
+];
+
+const codeSnippet = [
+  'pipeline {',
+  '  agent any',
+  '  stages {',
+  "    stage('Build') {",
+  '      steps {',
+  "        sh 'npm ci && npm test'",
+  "        sh 'sonar-scanner'",
+  '      }',
+  '    }',
+  "    stage('Deploy') {",
+  '      steps {',
+  "        sh 'docker build -t app .'",
+  "        sh 'kubectl apply -f k8s/'",
+  '      }',
+  '    }',
+  '  }',
+  '}',
+];
 
 const Widgets = ({ t }) => {
   const [pulse, setPulse] = useState(true);
   const [codeLine, setCodeLine] = useState(0);
 
-  const codeSnippet = [
-    "pipeline {",
-    "  agent any",
-    "  stages {",
-    "    stage('Build & Test') {",
-    "      steps {",
-    "        sh 'npm ci && npm test'",
-    "        sh 'sonar-scanner'",
-    "      }",
-    "    }",
-    "    stage('Deploy') {",
-    "      steps {",
-    "        sh 'kubectl apply -f k8s/'",
-    "      }",
-    "    }",
-    "  }",
-    "}"
-  ];
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setPulse(p => !p);
-    }, 2000);
+    const interval = setInterval(() => setPulse(p => !p), 2000);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCodeLine(prev => (prev + 1) % codeSnippet.length);
-    }, 1500);
+    }, 1400);
     return () => clearInterval(interval);
-  }, [codeSnippet.length]);
+  }, []);
 
   return (
     <section id="skills" className="widgets-section">
       <div className="container">
         <h2 className="section-title">{t.widgets.title}</h2>
-        
-        <div className="widgets-grid">
+
+        <div className="widgets-top-row">
           {/* Status Widget */}
           <div className="widget glass">
             <div className="widget-header">
@@ -57,12 +79,25 @@ const Widgets = ({ t }) => {
             </div>
             <div className="server-metrics">
               <div className="metric">
-                <span className="label">Production Cluster (k8s) CPU</span>
+                <div className="metric-label-row">
+                  <span className="label">Production Cluster (k8s)</span>
+                  <span className="metric-value">42%</span>
+                </div>
                 <div className="bar-bg"><div className="bar-fill cpu" style={{ width: '42%' }}></div></div>
               </div>
               <div className="metric">
-                <span className="label">Database Read Replicas RAM</span>
+                <div className="metric-label-row">
+                  <span className="label">Database Read Replicas</span>
+                  <span className="metric-value">68%</span>
+                </div>
                 <div className="bar-bg"><div className="bar-fill ram" style={{ width: '68%' }}></div></div>
+              </div>
+              <div className="metric">
+                <div className="metric-label-row">
+                  <span className="label">API Gateway Load</span>
+                  <span className="metric-value">31%</span>
+                </div>
+                <div className="bar-bg"><div className="bar-fill api" style={{ width: '31%' }}></div></div>
               </div>
             </div>
           </div>
@@ -89,27 +124,28 @@ const Widgets = ({ t }) => {
               </pre>
             </div>
           </div>
+        </div>
 
-          {/* Stack Widget */}
-          <div className="widget glass stack-widget">
-            <div className="widget-header">
-              <Layers className="widget-icon" />
-              <h3>Tech Stack</h3>
-            </div>
-            <div className="stack-grid">
-              <div className="stack-item">
-                <Code size={28} />
-                <span>{t.widgets.frontend}</span>
+        {/* Tech Arsenal — full width */}
+        <div className="widget glass tech-arsenal">
+          <div className="widget-header">
+            <Code2 className="widget-icon" />
+            <h3>{t.widgets.techArsenal}</h3>
+          </div>
+          <div className="arsenal-grid">
+            {techStack.map(group => (
+              <div key={group.category} className="arsenal-group">
+                <div className="arsenal-category">
+                  <span className="cat-icon">{group.icon}</span>
+                  <span className="cat-label">{t.widgets[group.category]}</span>
+                </div>
+                <div className="arsenal-badges">
+                  {group.items.map(item => (
+                    <span key={item} className="tech-badge">{item}</span>
+                  ))}
+                </div>
               </div>
-              <div className="stack-item">
-                <Server size={28} />
-                <span>{t.widgets.backend}</span>
-              </div>
-              <div className="stack-item">
-                <Database size={28} />
-                <span>{t.widgets.database}</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

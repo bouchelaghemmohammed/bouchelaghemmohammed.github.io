@@ -8,27 +8,31 @@
   },
   "hero": {
     "greeting": "Hi, I'm BOUCHELAGHEM Mohammed",
-    "role": "Full Stack Software Developer",
-    "description": "I architect and build scalable, secure, and exceptional digital experiences. Let's turn complex requirements into elegant solutions.",
+    "role": "Full Stack Web Developer",
+    "description": "I design and engineer complete web applications — from responsive, interactive frontends to robust, scalable backends. I turn complex requirements into clean, maintainable code.",
     "cta": "View My Work"
   },
   "services": {
     "title": "What I Do",
-    "s1Title": "Custom Web Applications",
-    "s1Desc": "Building complete, end-to-end web applications with modern architectures tailored to your business needs.",
-    "s2Title": "API & Backend Development",
-    "s2Desc": "Designing secure, high-performance RESTful APIs and microservices handling complex business logic.",
-    "s3Title": "Database Architecture",
-    "s3Desc": "Optimizing relational and NoSQL databases for scalability, performance, and data integrity."
+    "s1Title": "Full-Stack Web Development",
+    "s1Desc": "Building complete web applications end-to-end: pixel-perfect React & Next.js UIs paired with powerful Node.js, Laravel, or Spring Boot backends.",
+    "s2Title": "API & Backend Engineering",
+    "s2Desc": "Architecting secure, high-performance REST and GraphQL APIs — with proper authentication, validation, rate limiting, and thorough documentation.",
+    "s3Title": "Database Design & Optimization",
+    "s3Desc": "Modeling scalable schemas, writing optimized queries, and managing migrations across PostgreSQL, MySQL, MongoDB, and Redis.",
+    "s4Title": "DevOps & Cloud Deployment",
+    "s4Desc": "Containerizing apps with Docker, automating CI/CD pipelines with GitHub Actions or Jenkins, and deploying to cloud environments with zero downtime."
   },
   "widgets": {
     "title": "Technical Expertise",
     "liveStatus": "Infrastructure Status",
     "statusOnline": "All Environments Stable",
-    "frontend": "Frontend Architecture",
-    "backend": "Backend & APIs",
-    "database": "Cloud & Databases",
-    "tools": "CI/CD & DevOps"
+    "tools": "CI/CD Pipeline",
+    "techArsenal": "Tech Arsenal",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database & Cloud",
+    "devops": "DevOps & Tools"
   },
   "projects": {
     "title": "Featured Projects",
@@ -36,28 +40,34 @@
     "liveDemo": "Live Demo",
     "project1": {
       "title": "E-Commerce Platform",
-      "desc": "A fully functional modern e-commerce platform with real-time inventory and seamless checkout."
+      "desc": "A fully functional modern e-commerce platform with real-time inventory, Stripe payments, and seamless checkout built with Angular & Node.js."
     },
     "project2": {
       "title": "School Management System",
-      "desc": "A comprehensive dashboard for managing student grades, attendance, and administrative tasks."
+      "desc": "A comprehensive dashboard for managing student grades, attendance, and administrative tasks, built with C#, .NET Blazor, and SQL Server."
     },
     "project3": {
-      "title": "AI Content Generator App",
-      "desc": "An advanced SaaS application utilizing React and OpenAI APIs for automated content generation."
+      "title": "AI Content Generator",
+      "desc": "A SaaS application leveraging React and the OpenAI API to automate content creation with customizable tone and format options."
     },
     "project4": {
       "title": "CRM Dashboard (Laravel)",
-      "desc": "A robust customer relationship management system built with PHP Laravel and MySQL."
+      "desc": "A robust customer relationship management system built with PHP Laravel, Vue.js, and MySQL — featuring analytics and pipeline tracking."
     },
     "project5": {
       "title": "Finance API (Spring Boot)",
-      "desc": "A secure, high-performance financial API microservice utilizing Java Spring Boot and PostgreSQL."
+      "desc": "A secure, high-performance financial microservice built with Java Spring Boot and PostgreSQL, using JWT auth and Redis caching."
     },
     "project6": {
       "title": "Task Collab (Angular & Node)",
-      "desc": "A real-time project management tool using Angular, Node.js, Express, and MongoDB."
+      "desc": "A real-time collaborative project management tool using Angular, Node.js, Socket.io, and MongoDB with role-based access control."
     }
+  },
+  "footer": {
+    "text": "© 2026 Mohammed Bouchelaghem. Built with React & Vite."
+  }
+}
+
   },
   "footer": {
     "text": "© 2026 Mohammed Bouchelaghem. Built with React & Vite."

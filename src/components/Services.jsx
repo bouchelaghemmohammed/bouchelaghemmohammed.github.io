@@ -1,34 +1,27 @@
 import React from 'react';
-import { MonitorSmartphone, ServerCog, Database } from 'lucide-react';
+import { MonitorSmartphone, ServerCog, Database, Workflow } from 'lucide-react';
 import './Services.css';
 
 const Services = ({ t }) => {
+  const services = [
+    { icon: <MonitorSmartphone size={32} />, title: t.services.s1Title, desc: t.services.s1Desc },
+    { icon: <ServerCog size={32} />, title: t.services.s2Title, desc: t.services.s2Desc },
+    { icon: <Database size={32} />, title: t.services.s3Title, desc: t.services.s3Desc },
+    { icon: <Workflow size={32} />, title: t.services.s4Title, desc: t.services.s4Desc },
+  ];
+
   return (
     <section id="services" className="services-section">
       <div className="container">
         <h2 className="section-title">{t.services.title}</h2>
         <div className="services-grid">
-          <div className="service-card glass">
-            <div className="service-icon">
-              <MonitorSmartphone size={32} />
+          {services.map((s, i) => (
+            <div key={i} className="service-card glass">
+              <div className="service-icon">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
             </div>
-            <h3>{t.services.s1Title}</h3>
-            <p>{t.services.s1Desc}</p>
-          </div>
-          <div className="service-card glass">
-            <div className="service-icon">
-              <ServerCog size={32} />
-            </div>
-            <h3>{t.services.s2Title}</h3>
-            <p>{t.services.s2Desc}</p>
-          </div>
-          <div className="service-card glass">
-            <div className="service-icon">
-              <Database size={32} />
-            </div>
-            <h3>{t.services.s3Title}</h3>
-            <p>{t.services.s3Desc}</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

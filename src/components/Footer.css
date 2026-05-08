@@ -3,6 +3,8 @@
   border-top: 1px solid var(--border-color);
   background-color: var(--bg-primary);
   margin-top: 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {

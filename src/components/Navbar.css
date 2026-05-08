@@ -58,6 +58,27 @@
   color: var(--accent-blue);
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-blue);
+  color: #fff;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 14px var(--accent-glow);
+  transform: rotate(20deg) scale(1.08);
+}
+
 .nav-social {
   display: flex;
   align-items: center;
