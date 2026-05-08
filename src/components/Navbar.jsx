@@ -19,7 +19,7 @@ const Navbar = ({ lang, setLang, t, theme, toggleTheme }) => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled glass' : ''}`} style={{ position: 'relative', zIndex: 1000 }}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
         <a href="#" className="logo">
           BOUCHELAGHEM  MOHAMMED<span className="dot">.</span>
