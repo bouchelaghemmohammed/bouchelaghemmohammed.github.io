@@ -6,13 +6,14 @@ import Widgets from './components/Widgets';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import NetworkBackground from './components/NetworkBackground';
+import ScrollToTop from './components/ScrollToTop';
 
 import en from './locales/en.json';
 import fr from './locales/fr.json';
 
 function App() {
   const [lang, setLang] = useState('en');
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   const t = lang === 'en' ? en : fr;
 
@@ -35,6 +36,7 @@ function App() {
         <Projects t={t} />
       </main>
       <Footer t={t} />
+      <ScrollToTop />
     </>
   );
 }

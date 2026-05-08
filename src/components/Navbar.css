@@ -6,10 +6,17 @@
   height: 80px;
   z-index: 1000;
   transition: all 0.3s ease;
+  /* Subtle base so links are readable before scrolling */
+  background: transparent;
 }
 
 .navbar.scrolled {
-  height: 70px;
+  height: 68px;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 20px var(--shadow-color);
 }
 
 .nav-content {
