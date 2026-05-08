@@ -218,8 +218,8 @@
   cursor: default;
 }
 
-[data-theme="dark"] .tech-badge {
-  background: rgba(56, 189, 248, 0.07);
+[data-theme="light"] .tech-badge {
+  background: rgba(2, 132, 199, 0.07);
 }
 
 .tech-badge:hover {
