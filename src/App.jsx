@@ -13,7 +13,7 @@ import fr from './locales/fr.json';
 
 function App() {
   const [lang, setLang] = useState('en');
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const t = lang === 'en' ? en : fr;
 
