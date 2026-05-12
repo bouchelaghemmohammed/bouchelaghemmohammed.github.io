@@ -37,7 +37,7 @@ const Projects = ({ t }) => {
       id: 'project5',
       tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
       github: 'https://github.com/bouchelaghemmohammed/finance-api',
-      demo: '#',
+      demo: 'https://e-boutique-production.up.railway.app/accueil',
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80'
     },
     {
