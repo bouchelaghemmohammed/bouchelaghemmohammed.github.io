@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "deploy": "gh-pages -d dist",
+    "deploy": "vite build && git add docs -f && git commit -m \"deploy\" && git push origin main",
     "preview": "vite preview"
   },
   "dependencies": {
