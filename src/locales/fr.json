@@ -32,7 +32,11 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Base de données & Cloud",
-    "devops": "DevOps & Outils"
+    "devops": "DevOps & Outils",
+    "stat1Label": "Ans d'Expérience",
+    "stat2Label": "Projets Réalisés",
+    "stat3Label": "Technologies Maîtrisées",
+    "stat4Label": "Disponible"
   },
   "projects": {
     "title": "Projets Phares",
@@ -47,16 +51,16 @@
       "desc": "Un tableau de bord complet pour la gestion des notes, présences et tâches administratives, développé avec C#, .NET Blazor et SQL Server."
     },
     "project3": {
-      "title": "Générateur de Contenu IA",
-      "desc": "Une application SaaS exploitant React et l'API OpenAI pour automatiser la création de contenu avec des options de ton et de format personnalisables."
+      "title": "Plateforme de Soins Médicaux - MBClinic",
+      "desc": "Une plateforme complète pour la gestion des rendez-vous médicaux, des dossiers patients et des services de santé, développée avec Java, Spring Boot, PostgreSQL et Docker."
     },
     "project4": {
       "title": "Tableau de bord CRM (Laravel)",
       "desc": "Un système CRM robuste développé avec PHP Laravel, Vue.js et MySQL — avec analytics et suivi de pipeline commercial."
     },
     "project5": {
-      "title": "API Financière (Spring Boot)",
-      "desc": "Un microservice financier sécurisé et performant avec Java Spring Boot et PostgreSQL, utilisant JWT et mise en cache Redis."
+      "title": "Plateforme E-Commerce" ,
+      "desc": "Une plateforme complète pour la gestion des ventes en ligne, de l'inventaire et des interactions avec les clients, développée avec Java, Spring Boot, MySQL et Docker."
     },
     "project6": {
       "title": "Task Collab (Angular & Node)",

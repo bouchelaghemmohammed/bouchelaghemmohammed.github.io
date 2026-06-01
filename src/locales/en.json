@@ -32,14 +32,18 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Database & Cloud",
-    "devops": "DevOps & Tools"
+    "devops": "DevOps & Tools",
+    "stat1Label": "Years of Experience",
+    "stat2Label": "Projects Built",
+    "stat3Label": "Technologies Used",
+    "stat4Label": "Open to Work"
   },
   "projects": {
     "title": "Featured Projects",
     "viewCode": "View Code",
     "liveDemo": "Live Demo",
     "project1": {
-      "title": "E-Commerce Platform",
+      "title": "E-Commerce Platform ",
       "desc": "A fully functional modern e-commerce platform with real-time inventory, Stripe payments, and seamless checkout built with Angular & Node.js."
     },
     "project2": {
@@ -47,16 +51,16 @@
       "desc": "A comprehensive dashboard for managing student grades, attendance, and administrative tasks, built with C#, .NET Blazor, and SQL Server."
     },
     "project3": {
-      "title": "AI Content Generator",
-      "desc": "A SaaS application leveraging React and the OpenAI API to automate content creation with customizable tone and format options."
+      "title": "Medical Care Platform - MBClinic",
+      "desc": "A comprehensive platform for managing medical appointments, patient records, and healthcare services, built with Java, Spring Boot, PostgreSQL, and Docker."
     },
     "project4": {
       "title": "CRM Dashboard (Laravel)",
       "desc": "A robust customer relationship management system built with PHP Laravel, Vue.js, and MySQL — featuring analytics and pipeline tracking."
     },
     "project5": {
-      "title": "Finance API (Spring Boot)",
-      "desc": "A secure, high-performance financial microservice built with Java Spring Boot and PostgreSQL, using JWT auth and Redis caching."
+      "title": "E-Commerce Platform" ,
+      "desc": "A comprehensive platform for managing online sales, inventory, and customer interactions, built with Java, Spring Boot, MySQL, and Docker."
     },
     "project6": {
       "title": "Task Collab (Angular & Node)",

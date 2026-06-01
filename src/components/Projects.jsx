@@ -21,29 +21,29 @@ const Projects = ({ t }) => {
     },
     {
       id: 'project3',
-      tech: ['React', 'Node.js', 'OpenAI API', 'Tailwind'],
-      github: 'https://github.com/bouchelaghemmohammed/ai-content-generator',
+      tech: ['Java', 'Spring Boot / Wildfly', 'PostgreSQL', 'Docker'],
+      github: 'https://github.com/bouchelaghemmohammed/mbclinic.git',
       demo: '#',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80'
-    },
+      image: 'https://template.canva.com/EAFL_Fx2oQE/1/0/1600w-GG10jCiW3uA.jpg'
+},
     {
       id: 'project4',
       tech: ['PHP', 'Laravel', 'MySQL', 'Vue.js'],
-      github: 'https://github.com/bouchelaghemmohammed/crm-laravel',
+      github: 'https://github.com/bouchelaghemmohammed',
       demo: '#',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
     },
     {
       id: 'project5',
-      tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis'],
-      github: 'https://github.com/bouchelaghemmohammed/finance-api',
-      demo: 'https://e-boutique-production.up.railway.app',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80'
+      tech: ['Java', 'Jakarta EE / Tomcat', 'MySQL', 'Docker'],
+      github: 'https://github.com/bouchelaghemmohammed/E-Boutique.git',
+      demo: '#',
+      image: 'https://cdn.shopify.com/s/files/1/0249/6376/articles/ecommerce_20shopping_20cart_4c343e41-1041-49d3-bca8-3d7d1aa06d90.webp?v=1731767741'
     },
     {
       id: 'project6',
       tech: ['Angular', 'Node.js', 'Express', 'MongoDB'],
-      github: 'https://github.com/bouchelaghemmohammed/task-collab',
+      github: 'https://github.com/bouchelaghemmohammed/mohtasks.git',
       demo: '#',
       image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80'
     }
@@ -69,9 +69,15 @@ const Projects = ({ t }) => {
                   <a href={proj.github} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     <FaGithub size={18} /> {t.projects.viewCode}
                   </a>
-                  <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                    <ExternalLink size={18} /> {t.projects.liveDemo}
-                  </a>
+                  {proj.demo !== '#' ? (
+                    <a href={proj.demo} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                      <ExternalLink size={18} /> {t.projects.liveDemo}
+                    </a>
+                  ) : (
+                    <span className="btn-primary btn-disabled">
+                      <ExternalLink size={18} /> {t.projects.liveDemo}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

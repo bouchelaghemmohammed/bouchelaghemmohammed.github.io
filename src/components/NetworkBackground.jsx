@@ -3,6 +3,12 @@ import './NetworkBackground.css';
 
 const NetworkBackground = ({ theme }) => {
   const canvasRef = useRef(null);
+  const themeRef = useRef(theme);
+
+  // Keep themeRef in sync without restarting the animation loop
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,23 +23,23 @@ const NetworkBackground = ({ theme }) => {
     resize();
     window.addEventListener('resize', resize);
 
-    const NODE_COUNT = 70;
-    const MAX_DISTANCE = 140;
+    const NODE_COUNT = 55;
+    const MAX_DISTANCE = 130;
 
     const nodes = Array.from({ length: NODE_COUNT }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      vx: (Math.random() - 0.5) * 0.35,
-      vy: (Math.random() - 0.5) * 0.35,
-      r: Math.random() * 1.8 + 1.2,
+      vx: (Math.random() - 0.5) * 0.28,
+      vy: (Math.random() - 0.5) * 0.28,
+      r: Math.random() * 1.4 + 0.8,
     }));
 
     const draw = () => {
-      const isDark = theme === 'dark';
+      const isDark = themeRef.current === 'dark';
       const nodeRgb = isDark ? '56,189,248' : '14,165,233';
       const lineRgb = isDark ? '56,189,248' : '14,165,233';
-      const nodeAlpha = isDark ? 0.55 : 0.3;
-      const lineMaxAlpha = isDark ? 0.22 : 0.12;
+      const nodeAlpha = isDark ? 0.35 : 0.18;
+      const lineMaxAlpha = isDark ? 0.13 : 0.07;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -55,7 +61,7 @@ const NetworkBackground = ({ theme }) => {
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             ctx.strokeStyle = `rgba(${lineRgb},${alpha})`;
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 0.6;
             ctx.stroke();
           }
         }
@@ -77,7 +83,7 @@ const NetworkBackground = ({ theme }) => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resize);
     };
-  }, [theme]);
+  }, []); // Run once — theme changes handled via themeRef
 
   return <canvas ref={canvasRef} className="network-bg" />;
 };

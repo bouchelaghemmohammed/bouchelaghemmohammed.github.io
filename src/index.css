@@ -108,14 +108,26 @@ button {
   padding: 0 2rem;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
 /* Section */
 section {
-  padding: 6rem 0;
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 3rem;
   position: relative;
   display: inline-block;
@@ -129,10 +141,17 @@ section {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
+  width: 48px;
+  height: 3px;
   background-color: var(--accent-blue);
   border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.9rem;
+    margin-bottom: 2.25rem;
+  }
 }
 
 /* Buttons */
@@ -149,7 +168,7 @@ section {
 
 .btn-primary:hover {
   background-color: var(--accent-blue-hover);
-  box-shadow: 0 0 20px var(--accent-glow);
+  box-shadow: 0 4px 16px var(--accent-glow);
   transform: translateY(-2px);
 }
 
@@ -188,7 +207,7 @@ section {
   background: var(--accent-blue);
 }
 
-/* Glow effects */
+/* Subtle glow — only on hero title, not harsh */
 .glow-text {
-  text-shadow: 0 0 20px var(--accent-glow);
+  text-shadow: 0 2px 24px rgba(56, 189, 248, 0.2);
 }

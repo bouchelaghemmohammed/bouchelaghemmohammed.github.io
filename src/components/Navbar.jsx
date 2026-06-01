@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Globe, Sun, Moon } from 'lucide-react';
+import { Globe, Sun, Moon, Menu, X } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = ({ lang, setLang, t, theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,17 +19,22 @@ const Navbar = ({ lang, setLang, t, theme, toggleTheme }) => {
     setLang(lang === 'en' ? 'fr' : 'en');
   };
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
-        <a href="#" className="logo">
-          BOUCHELAGHEM  MOHAMMED<span className="dot">.</span>
+        <a href="#home" className="logo" onClick={closeMenu}>
+          <span className="logo-full">BOUCHELAGHEM MOHAMMED</span>
+          <span className="logo-short">B.M</span>
+          <span className="dot">.</span>
         </a>
-        <div className="nav-links">
-          <a href="#services">{t.nav.services}</a>
-          <a href="#skills">{t.nav.skills}</a>
-          <a href="#projects">{t.nav.projects}</a>
-          <a href="https://www.linkedin.com/in/bouchelaghemmoh" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="LinkedIn">
+
+        <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <a href="#services" onClick={closeMenu}>{t.nav.services}</a>
+          <a href="#skills" onClick={closeMenu}>{t.nav.skills}</a>
+          <a href="#projects" onClick={closeMenu}>{t.nav.projects}</a>
+          <a href="https://www.linkedin.com/in/bouchelaghemmoh" target="_blank" rel="noopener noreferrer" className="nav-social" aria-label="LinkedIn" onClick={closeMenu}>
             <FaLinkedin size={22} />
           </a>
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
@@ -39,6 +45,15 @@ const Navbar = ({ lang, setLang, t, theme, toggleTheme }) => {
             <span>{lang.toUpperCase()}</span>
           </button>
         </div>
+
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(m => !m)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
     </nav>
   );
